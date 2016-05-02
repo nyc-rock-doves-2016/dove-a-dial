@@ -1,0 +1,11 @@
+<h1> <%= @user.full_name %>'s Contacts </h1>
+<hr />
+<h2> <%= @contact.full_name %> </h2>
+<hr />
+<h3> Addresses </h3>
+  <% @addresses.each do |address| %>
+    <div><%= "#{address.address_one} #{address.address_two}, #{address.city} #{address.state}, #{address.zip} " %></div>
+  <% end %>
+  <a href='<%= new_contact_address_path(@contact) %>'> new </a>
+<hr />
+<h3> Phone Numbers </h3>
