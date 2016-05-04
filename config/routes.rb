@@ -9,12 +9,15 @@ Rails.application.routes.draw do
     resources :addresses
   end
 
+  post 'login_student' => 'index#login_student', as: :login_student
+  post 'login_teacher' => 'index#login_teacher', as: :login_teacher
 
+  root 'index#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
